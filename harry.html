@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="style1.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+
+
+<title>harry potter</title>
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+</style>
+</head>
+<body>
+    <!-- Sidebar -->
+<div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+    <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+    <a href="main.html" class="w3-bar-item w3-button">home</a>
+    <a href="family.html" class="w3-bar-item w3-button">family</a>
+    <a href="horror.html" class="w3-bar-item w3-button">horror</a>
+    <a href="movies.html" class="w3-bar-item w3-button">movies serise</a>
+    <a href="sign.html" class="w3-bar-item w3-button">sign in</a>
+  </div>
+  
+  <!-- Page Content -->
+  <div class="w3-teal">
+    <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button>
+    <div class="w3-container">
+      <h1>family movies</h1>
+    </div>
+  </div>
+  <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+</style>
+</head>
+<body>
+    
+<div class="gallery">
+    <a target="_blank" href="https://www.fushaar.com/movie/harry-potter-and-the-sorcerers-stone/">
+      <img src="./harry/1.jpg" alt="Cinque Terre" width="600" height="400">
+    </a>
+    <div class="desc">harry potter 1</div>
+  </div>
+  
+  <div class="gallery">
+    <a target="_blank" href="https://www.fushaar.com/movie/harry-potter-and-the-chamber-of-secrets/">
+      <img src="./harry/2.jpg" alt="Forest" width="600" height="400">
+    </a>
+    <div class="desc">harry potter 2</div>
+  </div>
+  
+  <div class="gallery">
+    <a target="_blank" href="https://www.fushaar.com/movie/harry-potter-and-the-prisoner-of-azkaban/">
+      <img src="./harry/3.jpg" alt="Northern Lights" width="600" height="400">
+    </a>
+    <div class="desc">harry potter 3</div>
+  </div>
+  <div class="gallery">
+    <a target="_blank" href="https://www.fushaar.com/movie/harry-potter-and-the-goblet-of-fire/">
+      <img src="./harry/4.jpg" alt="Northern Lights" width="600" height="400">
+    </a>
+    <div class="desc">harry potter 4</div>
+  </div>
+  <div class="footer">
+    <footer> 
+      <h3>contact us:</h3>
+      <a  href="https://www.instagram.com/movies.worldkw/" target="_blank"><img src="insta.svg" width="70px"></a>
+    </footer> </div>
+  
+ 
+
+     
+</body>
+</html> 
+
+  
+  
+  <script>
+    var slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+    }
+    
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+    }
+    var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="style1.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+
+
+
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+</style>
+</head>
+<body>
+    <!-- Sidebar -->
+<div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+    <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+    <a href="main.html" class="w3-bar-item w3-button">home</a>
+    <a href="horror.html" class="w3-bar-item w3-button">horror</a>
+    <a href="family.html" class="w3-bar-item w3-button">family</a>
+    <a href="movies.html" class="w3-bar-item w3-button">movies serise</a>
+    <a href="sign.html" class="w3-bar-item w3-button">sign in</a>
+    <a href="rate.html" class="w3-bar-item w3-button">rate us</a>
+  </div>
+  
+  <!-- Page Content -->
+  <div class="w3-teal">
+    <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button>
+    <div class="w3-container">
+      <h1>top three movies</h1>
+    </div>
+  </div>
+  
+  
+
+  <h1>scroll down !</h1>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="./images/bird.jpg" style="width:50%;">
+  <div class="text">bird box</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="./images/wonder.jpe" style="width:50%">
+  <div class="text">wonder</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+ <a target="_blank" href=""><img src="./images/minions.jpe" style="width:50%"> </a> 
+  <div class="text">minions</div>
+</div>
+
+</div>
+<br>
+
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+<button class="accordion">bird box</button>
+<div class="panel">
+  <p>Bird Box is a 2018 American post-apocalyptic horror thriller film directed by Susanne Bier from a screenplay written by Eric Heisserer, and based on the 2014 novel of the same name by Josh Malerman. The film follows a woman, played by Sandra Bullock, as she tries to protect herself and two children from malevolent supernatural entities that make people who look at them go insane and commit suicide.
+
+  </p>
+</div>
+
+<button class="accordion">minions</button>
+<div class="panel">
+  <p>Minions is a 2015 American 3D computer-animated comedy film,[7] serving as a spin-off prequel to the Despicable Me franchise. Produced by Illumination Entertainment for Universal Pictures, it was directed by Pierre Coffin and Kyle Balda, written by Brian Lynch, and produced by Chris Meledandri and Janet Healy.[8] The film stars the voices of Coffin (as the Minions, including Kevin, Stuart, and Bob), Sandra Bullock, Jon Hamm, Michael Keaton, Allison Janney, Steve Coogan, and Jennifer Saunders, with narration by Geoffrey Rush. It was first foreshadowed in the end credits of Despicable Me 2 (2013), where Kevin, Stuart, and Bob, three of the Minions and the film's main characters, are seen auditioning for the film.[9].</p>
+</div>
+
+<button class="accordion">wonder</button>
+<div class="panel">
+  <p>Wonder (also known as Wonder: Auggie) is a 2017 American comedy drama film directed by Stephen Chbosky and written by Jack Thorne, Steven Conrad, and Chbosky. It is based on the 2012 eponymous novel by R. J. Palacio and stars Julia Roberts, Owen Wilson, Jacob Tremblay, Noah Jupe, Izabela Vidovic, Mandy Patinkin, and Daveed Diggs.</p>
+</div>
+
+
+
+
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html> 
+
